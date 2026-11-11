@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        nav {
+            background: #222;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0488d4;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 100px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #home {
+            background: linear-gradient(135deg, #00bcd4, #0066cc);
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+
+        #home h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        #home p {
+            font-size: 20px;
+            margin-bottom: 25px;
+            max-width: 850px;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #0066cc;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #222;
+            color: white;
+        }
+
+        #typing {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .cursor {
+            border-right: 3px solid white;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        #about {
+            background: white;
+            text-align: center;
+            align-items: center;
+        }
+
+        #about h2,
+        #projects h2,
+        #skills h2,
+        #contact h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        #projects {
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        #skills {
+            background: white;
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background: #0066cc;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+        }
+
+        #contact {
+            background: #222;
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+
+        #contact p {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            #home h1 {
+                font-size: 35px;
+            }
+
+            #typing {
+                font-size: 28px;
+            }
+
+            #home p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            #about h2,
+            #projects h2,
+            #skills h2,
+            #contact h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">My Portfolio</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+
+        <img src="sheytsharon.jpg"
+             alt="Rea's Profile Picture"
+             class="profile-picture">
+
+        <h1>
+            <span id="typing" class="cursor"></span>
+        </h1>
+
+        <p>
+            I am willing to learn new things, especially in the field
+            of technology. I am interested in improving my knowledge
+            and skills in networking, graphic design, and other areas
+            of IT. I am open to learning new tools, software, and
+            technologies, and I am always willing to gain new
+            experiences that can help me grow both personally
+            and professionally.
+        </p>
+
+        <a href="#about" class="btn">Learn More About Me</a>
+
+    </section>
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                Hello! My name is Rea. I am a hardworking and motivated
+                person who is willing to learn new things, especially
+                in the field of technology, networking, and graphic
+                design. I am also willing to develop new skills and
+                gain more knowledge. This portfolio contains
+                information about me, my projects, skills, and
+                contact details.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>
+                    My first project is creating movie posters,
+                    advertisement posters, and logos.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>
+                    A simple school project in networking that
+                    taught me the basic functions of routers
+                    and switches.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>
+                    I am currently working on a school project
+                    using HTML to create a website. Through this
+                    project, I am learning how to build and design
+                    web pages, organize content, and use basic
+                    HTML codes.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">Networking</div>
+            <div class="skill">Graphic Design</div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact Me At</h2>
+
+        <p>Email: macolbacolreaa@email.com</p>
+        <p>Location: Siaton, Negros Oriental, Philippines</p>
+
+        <br>
+
+        <a href="#home" class="btn">Back to Home</a>
+
+    </section>
+
+    <script>
+        const text = "Hello! I'm Macolbacol Rea";
+        let index = 0;
+        let deleting = false;
+
+        function typeEffect() {
+            const typing = document.getElementById("typing");
+
+            if (!deleting) {
+                typing.textContent = text.substring(0, index);
+                index++;
+
+                if (index > text.length) {
+                    deleting = true;
+                    setTimeout(typeEffect, 1500);
+                    return;
+                }
+
+            } else {
+                typing.textContent = text.substring(0, index);
+                index--;
+
+                if (index < 0) {
+                    index = 0;
+                    deleting = false;
+                }
+            }
+
+            setTimeout(typeEffect, deleting ? 80 : 120);
+        }
+
+        typeEffect();
+    </script>
+
+</body>
+</html>
